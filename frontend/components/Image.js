@@ -1,9 +1,15 @@
 import React from 'react'
 
-function Image(props){
-    const [details]=props.data
+export default function Image(props){
+    // const [details]=props.data
+    const url=props.data
+    const date=props.date
+    console.log(url)
     return(        
-        <img src={details.url}/>
+        <figure>
+            <img src={url}/>
+            <figcaption>Picture taken on {date}</figcaption>
+        </figure>
+        // <p>Holder</p>
     )
 }
-export default Image
